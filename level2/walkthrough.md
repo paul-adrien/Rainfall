@@ -2,7 +2,7 @@
 
 # après analyse du binaire avec gdb, on voit la fonction gets qui est vulnérable aux attaques buffer overflow
 
-# mais on voit qu'il y a une protection sur l'adresse de retour de la pile a cause de la ligne +39 et +44, on va donc essayer de mettre un shellcode sur la heap grace a strdup qui fait u malloc
+# mais on voit qu'il y a une protection sur l'adresse de retour de la pile a cause de la ligne +39 et +44, on va donc essayer de mettre un shellcode sur le tas grace a strdup qui fait un malloc
 
 ltrace ./level2
 

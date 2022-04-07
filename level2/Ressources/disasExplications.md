@@ -72,7 +72,7 @@ End of assembler dump.
 x/s 0x8049860
 0x8049860 <stdout@@GLIBC_2.0>:	 ""
 
-# initialise les varirables de fflush puis l'execute (fflush(stdout))
+# initialise les variables de fflush puis l'execute (fflush(stdout))
 	mov    DWORD PTR [esp],eax
 	call   0x80483b0 <fflush@plt>
 
@@ -81,7 +81,7 @@ x/s 0x8049860
 	mov    DWORD PTR [esp],eax
 	call   0x80483c0 <gets@plt>
 
-# stckage du retour de la fonction dans eax et dans la pile
+# stockage du retour de la fonction dans eax et dans la pile
 	mov    eax,DWORD PTR [ebp+0x4]
 	mov    DWORD PTR [ebp-0xc],eax
 	mov    eax,DWORD PTR [ebp-0xc]
@@ -91,7 +91,7 @@ x/s 0x8049860
 	cmp    eax,0xb0000000
 	jne    0x8048527 <p+83>
 
-# stckage de "(%p)\n" dans eax
+# stockage de "(%p)\n" dans eax
 	mov    eax,0x8048620
    x/s 0x8048620
 0x8048620:	 "(%p)\n"

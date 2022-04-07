@@ -63,10 +63,10 @@ Dump of assembler code for function main:
 # on soustrait au registre 0x20 => 32 octet donc on agrandit la pile de 32 octets
 	sub    esp,0x20
 
-# on stock dans eax une variable de type DWORD (double word == 32bits) qui est a l'adresse [ebp+0xc] donc le haut de la pile + 12, ce qui correspond a récupérer une variable local
+# on stock dans eax une variable de type DWORD (double word == 32bits) qui est a l'adresse [ebp+0xc] donc le haut de la pile + 12, ce qui correspond a récupérer av
     mov    eax,DWORD PTR [ebp+0xc]
 
-# le pointeur eax est décalé de 4 octet, la taille de la variable
+# le pointeur eax est décalé de 4 octet, la taille de la variable => av[1]
 	add    eax,0x4
 
 # ces 4 lignes récupère les variable qui sont envoyer a la fonction lors de l'execution pour ensuite être mise dans la pile, au dessus de esp
@@ -75,7 +75,7 @@ Dump of assembler code for function main:
 	mov    eax,DWORD PTR [eax]
 	mov    DWORD PTR [esp],eax
 
-# atoi sur la valeur la variable dans eax
+# atoi sur la valeur la variable dans la pile
 	call   0x8049710 <atoi>
 
 # comparaison du retour d'atoi a 0x1a7 => 423

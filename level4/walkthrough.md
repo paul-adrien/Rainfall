@@ -1,6 +1,6 @@
 # level4
 
-# le début est le même que pour le evel précedent mais cette fois si la variable m est comparé a 16930116
+# le début est le même que pour le level précedent mais cette fois si la variable m est comparé a 16930116
 
 $ echo "AAAA %x %x %x %x %x %x %x %x %x %x %x %x %x %x" | ./level4
 AAAA b7ff26b0 bffff784 b7fd0ff4 0 0 bffff748 804848d bffff540 200 b7fd1ac0 b7ff37d0 41414141 20782520 25207825

